@@ -1,0 +1,7 @@
+language: c++
+matrix:
+  include:
+  - os: linux
+    script:
+    - ./cdep
+    - ./cmakeify
