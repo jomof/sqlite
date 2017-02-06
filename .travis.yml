@@ -5,4 +5,5 @@ matrix:
     script:
     - ./cdep
     - find . -name 'locale.*'
+    - cat /home/travis/build/jomof/hello-boost/./.cdep/modules/Findboost.cmake
     - ./cmakeify
