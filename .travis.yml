@@ -4,4 +4,5 @@ matrix:
   - os: linux
     script:
     - ./cdep
+    - find . -name 'locale.*'
     - ./cmakeify
