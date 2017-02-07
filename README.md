@@ -1,2 +1,2 @@
-# hello-boost
+# CDep SqlLite package
 
