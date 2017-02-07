@@ -3,7 +3,5 @@ matrix:
   include:
   - os: linux
     script:
-    - ./cdep
-    - find . -name 'locale.*'
-    - cat /home/travis/build/jomof/hello-boost/./.cdep/modules/Findboost.cmake
+    - wget wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - ./cmakeify
