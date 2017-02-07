@@ -14,8 +14,12 @@ deploy:
   true: 
     tags: true
   file: 
-  - build/zips/cdep-manifest.yml
+  - ./build/zips/cdep-manifest.yml
   - build/zips/sqllite-android-cxx_static-platform-9.zip
+  - build/zips/sqllite-android-gnustl_static-platform-21.zip
   - build/zips/sqllite-android-cxx_static-platform-21.zip
+  - build/zips/sqllite-android-gnustl_shared-platform-21.zip
+  - build/zips/sqllite-android-gnustl_shared-platform-9.zip
   - build/zips/sqllite-android-cxx_shared-platform-21.zip
+  - build/zips/sqllite-android-gnustl_static-platform-9.zip
   - build/zips/sqllite-android-cxx_shared-platform-9.zip
