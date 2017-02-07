@@ -3,5 +3,5 @@ matrix:
   include:
   - os: linux
     script:
-    - wget wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
+    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - ./cmakeify
