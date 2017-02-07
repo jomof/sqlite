@@ -1,3 +1,0 @@
-builders: [cmake]
-dependencies:
-- compile: com.github.jomof:boost:1.0.63-rev8
