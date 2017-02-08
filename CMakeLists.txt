@@ -2,10 +2,6 @@
 cmake_minimum_required(VERSION 3.7)
 set( CMAKE_VERBOSE_MAKEFILE on )
 project(sqllite)
-add_library(sqllite SHARED sqlite-amalgamation-3160200/sqlite3.c)
+add_library(sqllite STATIC sqlite-amalgamation-3160200/sqlite3.c)
 file(COPY sqlite-amalgamation-3160200/sqlite3.h DESTINATION ${CMAKEIFY_REDIST_INCLUDE_DIRECTORY})
-message("-------------------------> " ${CMAKE_SYSTEM_PROCESSOR})
-get_cmake_property(_variableNames VARIABLES)
-foreach (_variableName ${_variableNames})
-    message(STATUS "${_variableName}=${${_variableName}}")
-endforeach()
+
