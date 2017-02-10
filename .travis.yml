@@ -28,7 +28,7 @@ after_success: |
     git clone https://github.com/jomof/cdep-badges.git
     pushd cdep-badges
     mkdir -p com.github.jomof/sqllite/latest
-    echo built > com.github.jomof/sqllite/latest/built.txt
+    echo $RANDOM > com.github.jomof/sqllite/latest/built.txt
     git add com.github.jomof/sqllite/latest/built.txt
     git -c user.name='travis' -c user.email='travis' commit -m init
     git push -f -q https://jomof:$CDEP_BADGES_API_KEY@github.com/jomof/cdep-badges 
