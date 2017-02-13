@@ -1,6 +1,6 @@
 targets: [android]
 android:
-  lib: libsqllite.so
+  lib: libsqlite.so
   ndk:
     runtimes: [gnustl_static, gnustl_shared, c++_static, c++_shared]
     platforms: [9, 21]
