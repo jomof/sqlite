@@ -23,14 +23,4 @@ deploy:
   - build/zips/sqllite-android-cxx_shared-platform-21.zip
   - build/zips/sqllite-android-gnustl_static-platform-9.zip
   - build/zips/sqllite-android-cxx_shared-platform-9.zip
-after_success: |
-  if [ -n "$CDEP_BADGES_API_KEY" ]; then
-    git clone https://github.com/jomof/cdep-badges.git
-    pushd cdep-badges
-    mkdir -p com.github.jomof/sqllite/latest
-    echo $RANDOM > com.github.jomof/sqllite/latest/built.txt
-    git add com.github.jomof/sqllite/latest/built.txt
-    git -c user.name='travis' -c user.email='travis' commit -m init
-    git push -f -q https://jomof:$CDEP_BADGES_API_KEY@github.com/jomof/cdep-badges 
-    popd
-  fi
+
