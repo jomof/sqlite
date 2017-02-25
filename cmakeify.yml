@@ -2,6 +2,6 @@ targets: [android]
 android:
   lib: libsqlite.a
   ndk:
-    runtimes: [gnustl_static, gnustl_shared, c++_static, c++_shared]
+    runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
 
