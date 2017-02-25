@@ -15,12 +15,12 @@ deploy:
     tags: true
   file: 
   - ./build/zips/cdep-manifest.yml
-  - build/zips/sqlite-android-cxx_static-platform-9.zip
+  - build/zips/sqlite-android-cxx_static-platform-12.zip
   - build/zips/sqlite-android-gnustl_static-platform-21.zip
   - build/zips/sqlite-android-cxx_static-platform-21.zip
   - build/zips/sqlite-android-gnustl_shared-platform-21.zip
-  - build/zips/sqlite-android-gnustl_shared-platform-9.zip
+  - build/zips/sqlite-android-gnustl_shared-platform-12.zip
   - build/zips/sqlite-android-cxx_shared-platform-21.zip
-  - build/zips/sqlite-android-gnustl_static-platform-9.zip
-  - build/zips/sqlite-android-cxx_shared-platform-9.zip
+  - build/zips/sqlite-android-gnustl_static-platform-12.zip
+  - build/zips/sqlite-android-cxx_shared-platform-12.zip
 
