@@ -22,4 +22,5 @@ deploy:
   - build/zips/sqlite-android-stlport-platform-21.zip
   - build/zips/sqlite-android-cxx-platform-21.zip
   - build/zips/sqlite-android-stlport-platform-12.zip
+  - sqlite-amalgamation-3160200.zip
 
