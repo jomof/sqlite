@@ -6,6 +6,8 @@ matrix:
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG}
+    - chmod +x cdep
+    - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake
 deploy:
   provider: releases
