@@ -4,7 +4,7 @@ android:
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
- example: |
+example: |
    #include <sqlite3.h>
    void test() {
      sqlite3_initialize();
