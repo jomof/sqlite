@@ -3,12 +3,17 @@ matrix:
   include:
   - os: linux
     script:
+    - chmod +x cdep cmakeify
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0}
-    - chmod +x cdep
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake
+  - os: osx
+    script:
+    - chmod +x cdep cmakeify
+    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
+    - unzip sqlite-amalgamation-3160200.zip
 deploy:
   provider: releases
   api_key:
