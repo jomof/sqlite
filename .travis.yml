@@ -26,12 +26,15 @@ deploy:
   true: 
     tags: true
   file: 
-  - ./build/zips/cdep-manifest.yml
-  - build/zips/sqlite-android-gnustl-platform-21.zip
-  - build/zips/sqlite-android-cxx-platform-12.zip
-  - build/zips/sqlite-android-gnustl-platform-12.zip
-  - build/zips/sqlite-android-stlport-platform-21.zip
-  - build/zips/sqlite-android-cxx-platform-21.zip
+  - build/zips/cdep-manifest.yml
   - build/zips/sqlite-android-stlport-platform-12.zip
+  - build/zips/sqlite-android-cxx-platform-12.zip
+  - build/zips/sqlite-ios-platform-iPhone.zip
+  - build/zips/sqlite-ios-platform-simulator64.zip
+  - build/zips/sqlite-android-gnustl-platform-12.zip
+  - build/zips/sqlite-android-gnustl-platform-21.zip
+  - build/zips/sqlite-android-cxx-platform-21.zip
+  - build/zips/sqlite-android-stlport-platform-21.zip
+  - build/zips/sqlite-ios-platform-simulator.zip
   - sqlite-amalgamation-3160200.zip
 
