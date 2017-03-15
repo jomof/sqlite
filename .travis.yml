@@ -9,7 +9,7 @@ matrix:
     - ./cmakeify --dump
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os=android
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --targetOS=android
+    - ./cmakeify -wf .cdep/examples/cmake --target-os=android
   - os: osx
     script:
     - chmod +x cdep cmakeify
@@ -18,7 +18,7 @@ matrix:
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os=iOS
     - ./cdep
     - cat .cdep/modules/cdep-dependencies-config.cmake
-    - ./cmakeify -wf .cdep/examples/cmake --targetOS=iOS
+    - ./cmakeify -wf .cdep/examples/cmake --target-os=iOS
 deploy:
   provider: releases
   api_key:
