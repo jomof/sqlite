@@ -1,4 +1,4 @@
-targets: [iOS, android. linux]
+targets: [iOS, android, linux]
 android:
   lib: libsqlite.a
   ndk:
