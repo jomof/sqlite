@@ -7,7 +7,7 @@ matrix:
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
     - ./cmakeify --dump
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os=android
+    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os=android
   - os: osx
@@ -15,7 +15,7 @@ matrix:
     - chmod +x cdep cmakeify
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os=iOS
+    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
     - ./cdep
     - cat .cdep/modules/cdep-dependencies-config.cmake
     - ./cmakeify -wf .cdep/examples/cmake --target-os=iOS
