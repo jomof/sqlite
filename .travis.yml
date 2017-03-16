@@ -11,7 +11,7 @@ matrix:
     - ./cmakeify --dump
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os=android
+    - ./cmakeify -wf .cdep/examples/cmake --target-os android
     
   - env: TARGET_OS=linux
     jdk: oraclejdk7
@@ -23,7 +23,7 @@ matrix:
     - ./cmakeify --dump
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os linux
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os=linux
+    - ./cmakeify -wf .cdep/examples/cmake --target-os linux
     
   - env: TARGET_OS=iOS
     os: osx
@@ -34,6 +34,6 @@ matrix:
     - ./cmakeify --dump
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
     - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os=iOS    
+    - ./cmakeify -wf .cdep/examples/cmake --target-os iOS    
 
 
