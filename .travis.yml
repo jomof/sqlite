@@ -1,6 +1,7 @@
-
-
 language: c++
+script:
+- chmod +x cdep cmakeify
+
 matrix: 
   include: 
   - env: TARGET_OS=android
@@ -15,33 +16,33 @@ matrix:
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os android
     
-  - env: TARGET_OS=linux
-    addons: 
-      apt: 
-        packages: [g++-4.8, clang-3.6]
-        sources: 
-        - ubuntu-toolchain-r-test
-        - llvm-toolchain-precise-3.6
-    jdk: oraclejdk7
-    os: linux
-    script:
-    - chmod +x cdep cmakeify
-    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
-    - unzip sqlite-amalgamation-3160200.zip
-    - ./cmakeify --dump
-    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os linux
-    - ./cdep
-    - ./cmakeify -wf .cdep/examples/cmake --target-os linux
-    
-#  - env: TARGET_OS=iOS
-#    os: osx
-#    script:    
+#  - env: TARGET_OS=linux
+#    addons: 
+#      apt: 
+#        packages: [g++-4.8, clang-3.6]
+#        sources: 
+#        - ubuntu-toolchain-r-test
+#        - llvm-toolchain-precise-3.6
+#    jdk: oraclejdk7
+#    os: linux
+#    script:
 #    - chmod +x cdep cmakeify
 #    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
 #    - unzip sqlite-amalgamation-3160200.zip
 #    - ./cmakeify --dump
-#    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
+#    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os linux
 #    - ./cdep
-#    - ./cmakeify -wf .cdep/examples/cmake --target-os iOS    
+#    - ./cmakeify -wf .cdep/examples/cmake --target-os linux
+    
+  - env: TARGET_OS=iOS
+    os: osx
+    script:    
+    - chmod +x cdep cmakeify
+    - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
+    - unzip sqlite-amalgamation-3160200.zip
+    - ./cmakeify --dump
+    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
+    - ./cdep
+    - ./cmakeify -wf .cdep/examples/cmake --target-os iOS    
 
 
