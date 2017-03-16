@@ -1,3 +1,5 @@
+
+
 language: c++
 matrix: 
   include: 
@@ -14,6 +16,12 @@ matrix:
     - ./cmakeify -wf .cdep/examples/cmake --target-os android
     
   - env: TARGET_OS=linux
+    addons: 
+      apt: 
+        packages: [g++-4.8, clang-3.6]
+        sources: 
+        - ubuntu-toolchain-r-test
+        - llvm-toolchain-precise-3.6
     jdk: oraclejdk7
     os: linux
     script:
