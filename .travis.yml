@@ -12,6 +12,7 @@ matrix:
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os android
+    - cat build/zips/cdep-manifest.yml
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os android
     
@@ -36,6 +37,7 @@ matrix:
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
     - unzip sqlite-amalgamation-3160200.zip
     - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0} --target-os iOS
+    - cat build/zips/cdep-manifest.yml
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake --target-os iOS    
 
