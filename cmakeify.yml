@@ -11,4 +11,5 @@ example: |
    void test() {
      sqlite3_initialize();
    }
+   
 
