@@ -2,6 +2,7 @@ targets: [iOS, android]
 android:
   lib: libsqlite.a
   ndk:
+    compilers: [gcc]
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
 iOS:
