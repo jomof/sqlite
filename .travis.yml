@@ -1,7 +1,5 @@
 language: c++
 script:
-
-
 matrix: 
   include: 
   - env: TARGET_OS=android
