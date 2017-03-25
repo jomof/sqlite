@@ -20,8 +20,8 @@ matrix:
         sources:
         - ubuntu-toolchain-r-test
         packages:
-        - gcc
-        - g++
+        - gcc-4.8
+        - g++-4.8
     script:
     - chmod +x cdep cmakeify
     - wget http://www.sqlite.org/2017/sqlite-amalgamation-3160200.zip
