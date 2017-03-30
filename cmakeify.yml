@@ -1,11 +1,9 @@
 targets: [iOS, android]
+buildTarget sqlite
 android:
-  lib: libsqlite.a
   ndk:
     runtimes: [c++, gnustl, stlport]
     platforms: [12, 21]
-iOS:
-  lib: libsqlite.a
 example: |
    #include <sqlite3.h>
    void test() {
