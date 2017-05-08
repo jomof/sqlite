@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.org/jomof/sqlite.svg?branch=master)](https://travis-ci.org/jomof/sqlite)
-[![CDep Status](https://cdep-io.github.io/com.github.jomof/sqlite/latest/latest.svg)](https://github.com/jomof/sqlite/releases/latest)
 
-# CDep Packaging for Sqlite
-
-
-
+# CDep Packaging of Sqlite Library
+Include these in your cdep.yml file. More recent versions may be available, see releases.
+```
+- compile: com.github.jomof:sqlite:3.16.2-rev51
+```
+Go [here](https://github.com/google/cdep) to get started using CDep package manager.
 
